@@ -13,10 +13,9 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 
-console.log('SAJFDBJHKBDFEHDFGBDSLJKFGDS OSOSOSOSOSOOS')
 // DATABASE SETUP
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://jah:jah@ds135876.mlab.com:35876/maps');
+mongoose.connect(config.mongo.uri);
 
 // Handle the connection event
 var db = mongoose.connection;
